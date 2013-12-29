@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnSubmit").click(function() {
+                var chkItem = $("input:radio[name=Options]:checked").val();
+                if (chkItem!=undefined) {
+                    alert(chkItem);
+                }
+                else {
+                    alert("Select atleast one option...!!!");
+                }
+            
+            });
+        });
+    </script>
+</head>
+<body>
+    <b>Select Your option</b> <br />
+    <input type="radio" id="rdb1" name="Options" value="Option1" /><label for="rdb1" >Option1</label>
+    <input type="radio" id="rdb2" name="Options" value="Option2" /><label for="rdb2">Option2</label>
+    <br /><br />
+    <input type="button" id="btnSubmit" name="name" value="Submit" />
+</body>
+</html>

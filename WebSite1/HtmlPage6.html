@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+      <script src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var elements = $("input:text");
+            elements.attr("title", "Manadatory");
+            $("#btn1").click(function () {
+                elements.filter(".mf").addClass("highlight");
+            });
+            var selectedItems = "";
+            $("form input:text").each(function () {
+
+
+            });
+            
+        });
+        </script>
+    <style type="text/css">
+        .highlight {
+        border:1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+    <div id="div1">
+    <b>Enter Name:</b><input type="text" class="mf"/> <br />
+    <b>Middle Name:</b><input type="text" /><br />
+    <b>Last Name:</b><input type="text" class="mf"/><br />
+    <input type="button" id="btn1" value="Submit" />
+    <p id="pResult"></p>
+        </div> </form>
+</body>
+</html>

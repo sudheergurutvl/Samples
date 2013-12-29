@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        function blink() {
+            $("#header1").toggleClass("blinkClass");
+        }
+        $(document).ready(function () {
+            $("#header1").addClass("h1Class");
+            window.setInterval(blink,1000);
+        });
+    </script>
+    <style type="text/css">
+        .h1Class {
+        text-align:center;
+        font-family:'Times New Roman';
+        
+        font-size:50px;
+        background-color:yellow;
+        color:red;
+        }
+        .blinkClass {
+         text-align:center;
+        font-family:'Times New Roman';
+     
+        font-size:50px;
+        background-color:blue;
+        color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header1">Hello... Good Morning...!!!</h1>
+
+</body>
+</html>

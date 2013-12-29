@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        var count = 1;
+        function showImages() {
+            switch (count)
+            {
+                case 1:
+                    $("#img1").attr("src", "Images/2.jpg");
+                    count++;
+                    break;
+                case 2:
+                    $("#img1").attr("src", "Images/3.jpg");
+                    count++;
+                    break;
+                case 3:
+                    $("#img1").attr("src", "Images/4.jpg");
+                    count++;
+                    break;
+                case 4:
+                    $("#img1").attr("src", "Images/5.jpg");
+                    count++;
+                    break;
+                case 5:
+                    $("#img1").attr("src", "Images/6.jpg");
+                    count++;
+                    break;
+                case 6:
+                    $("#img1").attr("src", "Images/1.jpg");
+                    count = 1;
+                    break;
+            }
+        }
+        $(document).ready(function () {
+            window.setInterval(showImages,1500);
+
+        });
+        </script>
+ <style type="text/css">
+        #divmain {
+            width: 850px;
+            height: 315px;
+            padding: 5px;
+            border: 5px;
+            border: 4px solid green;
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+     <div align="center">   
+        <div id="divmain">
+            <img id="img1" src="Images/1.jpg" alt="Image1" />
+        </div>
+    </div>
+</body>
+</html>

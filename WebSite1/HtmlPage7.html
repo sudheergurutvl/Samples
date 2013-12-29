@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+      <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+   
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnSubmit').click(function (e) {
+                var isValid = true;
+                $("#divRes").attr("display",false)
+                $('input[type="text"]').each(function () {
+                    var v1 = $("#txtName").val();
+                    var v2 = $("#txtPass").val();
+                    var err="";
+                    if ($.trim($(this).val()) == '') {
+                        isValid = false;
+                        $(this).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+
+                        });
+                        
+                            if (v1 == "") {
+                                err += "Name is mandatory" + "\n";
+                            }
+                            if (v2 == "") {
+                                err += "Password is mandatory" + "\n";
+                            }
+                        
+                        if (err != "") {
+                            alert(err);
+                            $("#txtName").focus();
+                            return false;
+                        }
+                      }
+                    else {
+                        $(this).css({
+                            "border": "",
+                            "background": ""
+                        });
+                    }
+                });
+                if (isValid == false)
+                    e.preventDefault();
+                else
+                    alert('sucess');
+               
+            });
+        });
+
+    </script>
+    <style type="text/css">
+label {display:inline-block; width:60px;}
+</style>
+</head>
+<body>
+    <span></span>
+    <form action="#">
+ 
+    <label for="txtName">Name:</label>
+    <input type='text' id='txtName' name="Name" /><br />
+    <label for="tctPass">Password:</label> 
+    <input type='text' id='txtPass' name="Pass"/> <br />
+     <input type="button" id="btnSubmit" value=" Submit "/>
+   
+    <div id="divRes"></div>
+        </form>
+
+</body>
+</html>
